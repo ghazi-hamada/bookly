@@ -16,7 +16,9 @@ class FeaturedListViewItem extends StatelessWidget {
           borderRadius: BorderRadius.circular(16),
           color: Colors.red,
           image: const DecorationImage(
-            image: AssetImage(AppAssets.book1,),
+            image: AssetImage(
+              AppAssets.book1,
+            ),
             fit: BoxFit.fill,
           ),
         ),

@@ -1,7 +1,8 @@
+import 'package:flutter/material.dart';
+
 import 'package:bookly/core/utils/styles.dart';
 import 'package:bookly/features/home/pressentation/views/widgets/custom_appBar.dart';
 import 'package:bookly/features/home/pressentation/views/widgets/featured_books_list_view.dart';
-import 'package:flutter/material.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({Key? key}) : super(key: key);
