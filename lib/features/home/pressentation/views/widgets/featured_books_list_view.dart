@@ -1,7 +1,6 @@
 import 'package:bookly/features/home/pressentation/views/widgets/featured_list_view_ltem.dart';
 import 'package:flutter/material.dart';
 
-
 class FeaturedBooksListView extends StatelessWidget {
   const FeaturedBooksListView({super.key});
 
