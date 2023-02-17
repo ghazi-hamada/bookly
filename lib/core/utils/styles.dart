@@ -18,7 +18,7 @@ abstract class Styles {
   );
 
   static TextStyle textStyle30 = TextStyle(
-    fontSize: 20,
+    fontSize: 30,
     fontWeight: FontWeight.normal,
     fontFamily: GoogleFonts.notoSerif().fontFamily,
   );
