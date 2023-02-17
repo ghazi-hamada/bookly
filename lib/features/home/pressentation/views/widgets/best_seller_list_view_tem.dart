@@ -1,12 +1,14 @@
 import 'package:bookly/core/utils/assets.dart';
 import 'package:bookly/core/utils/styles.dart';
+import 'package:bookly/features/home/pressentation/views/widgets/book_rating.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class BestSellerListViewTem extends StatelessWidget {
-const BestSellerListViewTem({ Key? key }) : super(key: key);
+  const BestSellerListViewTem({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return SizedBox(
       height: 125,
       child: Row(
@@ -26,8 +28,8 @@ const BestSellerListViewTem({ Key? key }) : super(key: key);
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 30),
+          const SizedBox(width: 30),
+          Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -53,7 +55,9 @@ const BestSellerListViewTem({ Key? key }) : super(key: key);
                       "19.99 €",
                       style: Styles.textStyle20
                           .copyWith(fontWeight: FontWeight.bold),
-                    )
+                    ),
+                    const Spacer(),
+                    const BookRating()
                   ],
                 )
               ],
