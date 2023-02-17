@@ -57,7 +57,9 @@ class BestSellerListViewTem extends StatelessWidget {
                           .copyWith(fontWeight: FontWeight.bold),
                     ),
                     const Spacer(),
-                    const BookRating()
+                    const BookRating(
+                     
+                    )
                   ],
                 )
               ],
