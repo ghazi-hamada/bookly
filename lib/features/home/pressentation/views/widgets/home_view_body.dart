@@ -1,4 +1,5 @@
 import 'package:bookly/core/utils/assets.dart';
+import 'package:bookly/features/home/pressentation/views/widgets/best_seller_list_view_tem.dart';
 import 'package:flutter/material.dart';
 
 import 'package:bookly/core/utils/styles.dart';
@@ -25,55 +26,10 @@ class HomeViewBody extends StatelessWidget {
               textAlign: TextAlign.start,
             ),
           ),
-          BestSelerListViewItem()
+          BestSellerListViewTem()
         ],
       ),
     );
   }
 }
 
-class BestSelerListViewItem extends StatelessWidget {
-  const BestSelerListViewItem({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: 125,
-      child: Row(
-        children: [
-          AspectRatio(
-            aspectRatio: 2.5 / 4,
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8),
-                color: Colors.red,
-                image: const DecorationImage(
-                  image: AssetImage(
-                    AppAssets.book1,
-                  ),
-                  fit: BoxFit.fill,
-                ),
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 30),
-            child: Column(
-              children: [
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * .5,
-                  child: Text(
-                    "Harry Potter and the Goblet of Fire",
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                    style: Styles.textStyle20,
-                  ),
-                )
-              ],
-            ),
-          )
-        ],
-      ),
-    );
-  }
-}
