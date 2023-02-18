@@ -20,29 +20,25 @@ class BookDetailsViewBody extends StatelessWidget {
             children: const [
               //app bar
               CustomBookDetailsAppBar(),
-
               //image to reating
               BookDetailsSectoin(),
-
               //Action button
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20),
                 child: BooksAction(),
               ),
-
+              //sizedbox 45
               Expanded(child: SizedBox(height: 45)),
-
               //text
               SimilarBookSection(),
-
+              //sizedbox 10
               SizedBox(height: 10),
-
               //list view
               Padding(
                 padding: EdgeInsets.all(8.0),
                 child: SimilarBookListview(),
               ),
-
+              //sizedbox 40
               SizedBox(height: 40),
             ],
           ),
