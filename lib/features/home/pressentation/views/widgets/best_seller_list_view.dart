@@ -1,7 +1,7 @@
 import 'package:bookly/core/utils/app_router.dart';
 import 'package:bookly/features/home/pressentation/views/widgets/best_seller_list_view_tem.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
+import 'package:get/get.dart';
 
 class BestSellerListView extends StatelessWidget {
   const BestSellerListView({super.key});
@@ -10,7 +10,7 @@ class BestSellerListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        GoRouter.of(context).push(AppRouter.kBookDetailsView);
+        Get.toNamed(AppRouter.kBookDetailsView);
       },
       child: ListView.builder(
         physics: const NeverScrollableScrollPhysics(),
