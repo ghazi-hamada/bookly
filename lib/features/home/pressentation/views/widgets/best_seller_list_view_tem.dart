@@ -4,8 +4,8 @@ import 'package:bookly/features/home/pressentation/views/widgets/book_rating.dar
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class BestSellerListViewTem extends StatelessWidget {
-  const BestSellerListViewTem({Key? key}) : super(key: key);
+class BookListViewItems extends StatelessWidget {
+  const BookListViewItems({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -57,9 +57,7 @@ class BestSellerListViewTem extends StatelessWidget {
                           .copyWith(fontWeight: FontWeight.bold),
                     ),
                     const Spacer(),
-                    const BookRating(
-                     
-                    )
+                    const BookRating()
                   ],
                 )
               ],
