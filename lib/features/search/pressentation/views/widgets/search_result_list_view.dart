@@ -1,7 +1,6 @@
 import 'package:bookly/features/home/pressentation/views/widgets/best_seller_list_view_tem.dart';
 import 'package:flutter/material.dart';
 
-
 class SearchResultListView extends StatelessWidget {
   const SearchResultListView({super.key});
 

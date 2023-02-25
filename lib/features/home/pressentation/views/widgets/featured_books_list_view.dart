@@ -19,6 +19,5 @@ class FeaturedBooksListView extends StatelessWidget {
         },
       ),
     );
-    
   }
 }
