@@ -8,6 +8,16 @@ abstract class NewsetBooksState extends Equatable {
 }
 
 class NewsetBooksInitial extends NewsetBooksState {}
+
 class NewsetBooksLoading extends NewsetBooksState {}
-class NewsetBooksFailure extends NewsetBooksState {}
-class NewsetBooksSuccess extends NewsetBooksState {}
+
+class NewsetBooksFailure extends NewsetBooksState {
+  final String errorMessge;
+  const NewsetBooksFailure(this.errorMessge);
+}
+
+class NewsetBooksSuccess extends NewsetBooksState {
+  final List<BookModel> books;
+
+  const NewsetBooksSuccess(this.books);
+}
