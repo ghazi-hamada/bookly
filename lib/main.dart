@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:bookly/constants.dart';
@@ -14,14 +13,14 @@ class BooklyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'bookly App',
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: KprimaryColor,
         textTheme: GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
       ),
-      getPages: AppRouter.routes,
+      routes:  AppRouter.routes,
     );
   }
 }

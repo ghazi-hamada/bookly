@@ -14,7 +14,7 @@ class FeaturesBooksLoading extends FeaturesBooksState {}
 class FeaturesBooksFailure extends FeaturesBooksState {
   final String errorMessage;
   const FeaturesBooksFailure(
-     this.errorMessage,
+    this.errorMessage,
   );
 }
 

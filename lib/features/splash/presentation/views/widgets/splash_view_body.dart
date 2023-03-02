@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 
 import 'package:bookly/core/utils/assets.dart';
 import 'package:bookly/features/splash/presentation/views/widgets/sliding_text.dart';
-import 'package:get/get.dart';
 
 import '../../../../home/pressentation/views/home_view.dart';
 
@@ -63,7 +62,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
       // context.go(
       //   "/HomeView",
       // );
-      Get.toNamed(AppRouter.kHomeView);
+      Navigator.pushNamed(context, AppRouter.kHomeView);
       // Get.offAll(() =>  HomeView(),
       //     transition: Transition.fade, duration: kTranstionDuration);
     });

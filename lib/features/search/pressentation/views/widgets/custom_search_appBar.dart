@@ -1,6 +1,5 @@
 import 'package:bookly/features/search/pressentation/views/widgets/customSearchTextField.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class CustomSearchAppBar extends StatelessWidget {
   const CustomSearchAppBar({
@@ -16,7 +15,7 @@ class CustomSearchAppBar extends StatelessWidget {
           Expanded(
             flex: 1,
             child: IconButton(
-              onPressed: () => Get.back(),
+              onPressed: () => Navigator.pop(context),
               icon: const Icon(Icons.arrow_back_rounded),
               iconSize: 25,
             ),
