@@ -1,7 +1,9 @@
+import 'package:bookly/core/utils/api_sercice.dart';
 import 'package:bookly/core/utils/service_locator.dart';
 import 'package:bookly/features/home/data/repos/home_repo_impl.dart';
 import 'package:bookly/features/home/pressentation/view_model/features_books/features_books_cubit.dart';
 import 'package:bookly/features/home/pressentation/view_model/newset_books_cubit/newset_books_cubit.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -21,9 +23,9 @@ class BooklyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-            create: (context) => FeaturesBooksCubit(getIt.get<HomeRepoImpl>())),
+            create: (context) => FeaturesBooksCubit(HomeRepoImpl(ApiSercice(Dio())))..fetchFelteredBooks()),
         BlocProvider(
-            create: (context) => NewsetBooksCubit(getIt.get<HomeRepoImpl>())),
+            create: (context) => NewsetBooksCubit(HomeRepoImpl(ApiSercice(Dio())))),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
