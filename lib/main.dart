@@ -11,6 +11,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:bookly/constants.dart';
 import 'package:bookly/core/utils/app_router.dart';
 
+import 'features/home/pressentation/view_model/similar_books_cubit/similar_books_cubit.dart';
+
 void main() {
   runApp(const BooklyApp());
 }
@@ -26,6 +28,8 @@ class BooklyApp extends StatelessWidget {
             create: (context) => FeaturesBooksCubit(HomeRepoImpl(ApiSercice(Dio())))..fetchFelteredBooks()),
         BlocProvider(
             create: (context) => NewsetBooksCubit(HomeRepoImpl(ApiSercice(Dio())))..fetchFelteredBooks()),
+        BlocProvider(
+            create: (context) =>  SimilarBooksCubit(HomeRepoImpl(ApiSercice(Dio())))..fetchSimilarBooks(),)
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

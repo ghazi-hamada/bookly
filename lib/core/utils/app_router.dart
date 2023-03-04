@@ -1,5 +1,10 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
+import 'package:bookly/core/utils/api_sercice.dart';
+import 'package:bookly/features/home/data/repos/home_repo_impl.dart';
+import 'package:bookly/features/home/pressentation/view_model/similar_books_cubit/similar_books_cubit.dart';
 import 'package:bookly/features/home/pressentation/views/book_details_view.dart';
 import 'package:bookly/features/home/pressentation/views/home_view.dart';
 import 'package:bookly/features/search/pressentation/views/search_view.dart';
@@ -14,6 +19,10 @@ abstract class AppRouter {
     '/': (_) => const SplashView(),
     kSearchView: (_) => const SearchView(),
     kHomeView: (_) => const HomeView(),
-    kBookDetailsView: (_) => const BookDetailsView(),
+    // kBookDetailsView: (_) => BlocProvider(
+    //       create: (_) =>
+    //           SimilarBooksCubit(HomeRepoImpl(ApiSercice(Dio())))..fetchSimilarBooks(),
+    //       child:  BookDetailsView(bookModel: ),
+    //     ),
   };
 }
