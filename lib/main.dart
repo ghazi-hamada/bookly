@@ -25,7 +25,7 @@ class BooklyApp extends StatelessWidget {
         BlocProvider(
             create: (context) => FeaturesBooksCubit(HomeRepoImpl(ApiSercice(Dio())))..fetchFelteredBooks()),
         BlocProvider(
-            create: (context) => NewsetBooksCubit(HomeRepoImpl(ApiSercice(Dio())))),
+            create: (context) => NewsetBooksCubit(HomeRepoImpl(ApiSercice(Dio())))..fetchFelteredBooks()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
