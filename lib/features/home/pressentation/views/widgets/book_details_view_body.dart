@@ -11,6 +11,9 @@ class BookDetailsViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final arguments = (ModalRoute.of(context)?.settings.arguments ??
+        <String, dynamic>{}) as Map;
+    print(arguments['bookModel']);
     return CustomScrollView(
       slivers: [
         SliverFillRemaining(
