@@ -22,6 +22,11 @@ abstract class Styles {
     fontWeight: FontWeight.normal,
     fontFamily: GoogleFonts.notoSerif().fontFamily,
   );
+  static TextStyle textStyle25 = TextStyle(
+    fontSize: 25,
+    fontWeight: FontWeight.normal,
+    fontFamily: GoogleFonts.notoSerif().fontFamily,
+  );
 
   static const textStyle14 = TextStyle(
     fontSize: 14,

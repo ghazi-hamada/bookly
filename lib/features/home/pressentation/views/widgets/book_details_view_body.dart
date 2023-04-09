@@ -25,9 +25,9 @@ class BookDetailsViewBody extends StatelessWidget {
               //image to reating
               BookDetailsSectoin(bookModel: bookModel),
               //Action button
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
-                child: BooksAction(),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: BooksAction(bookModel: bookModel),
               ),
               //sizedbox 45
               const Expanded(child: SizedBox(height: 45)),
